@@ -7,7 +7,7 @@ A webpage that counts the amount of time you've spent staring at it
 ![Cool looking screenshot](img/screenshot.png)
 
 ## Demo
-Should be at [https://ankumeah.github.io/visittime]
+Should be at [https://ankumeah.github.io/visittime](https://ankumeah.github.io/visittime)
 but in case its not, I probably just got lazy ;]
 
 ## Features
