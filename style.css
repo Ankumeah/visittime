@@ -1,0 +1,33 @@
+body {
+  background-color: #b1b2d0;
+  color: #b1b2d0;
+  height: 100vh;
+  padding: 5vh;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 3em;
+  width: 100%;
+  background-image: url(img/snow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-shadow: 0 0 5px #f6f6ff;
+}
+
+.control-button {
+  font-size: 1.3em;
+                    /*
+                      To why this does not
+                      inherit from body,
+                      I do not know,
+                      nor is it in my interest to care
+                    */
+  height: 7rem;
+  width: 15rem;
+  background-color: #ffffff;
+  color: #b1b2d0;
+  border-width: 0px;
+  border-radius: 999999rem;
+  /* UNLIMITED POWERRRR */
+  box-shadow: 0 0 5px #777799;
+}

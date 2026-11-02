@@ -1,19 +1,24 @@
 # Visit Time
-A webpage that counts the amount of time you've spent staring at it. All on a single line of code.
+A webpage that counts the amount of time you've spent staring at it
+
+> [!NOTE]
+> This repo is a fork of [kpoovakan/visittime](https://github.com/kpoovakan/visittime)
+
+![Cool looking screenshot](img/screenshot.png)
 
 ## Demo
-Visit this webpage [here](https://kpoovakan.github.io/visittime). No setup required. Open the link and stare.
+Should be at [https://ankumeah.github.io/visittime]
+but in case its not, I probably just got lazy ;]
 
 ## Features
-* Deciseconds
-* Seconds
-* Minutes
-* Hours
-* Days
-* Page visits, stored locally
-
-## For Developers
-Visittime was going to be made into a winter-themed stopwatch of sorts, but this project has been discontinued. Developers are welcome to contribute to this project and bring it to its finish. The unminified HTML file is [here](minifiers/unminified.html) and all other files are for reference purposes.  
+- Seconds
+- Minutes
+- Hours
+- Days
+- Total sessions, stored locally
 
 ## Credits and Licensing
-Built by [kpoovakan](https://kpoovakan.github.io). Licensed under the [Boost Software License](https://github.com/kpoovakan/visittime/blob/main/LICENSE). The winter wonderland background was drawn in [Turbowarp](https://turbowarp.org/editor).
+Orginal by [kpoovakan](https://kpoovakan.github.io). Licensed under the [Boost Software License](https://github.com/kpoovakan/visittime/blob/main/LICENSE). The winter wonderland background was drawn in [Turbowarp](https://turbowarp.org/editor).
+(Seriously tho, amazing art)
+
+Forked by [me](https://github.com/Ankumeah)!
