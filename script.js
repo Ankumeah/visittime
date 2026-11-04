@@ -27,6 +27,7 @@ async function toggle() {
   let cur = 0;
   while (started) {
     await wait(1000);
+    if (!started) { break; } // In case user stopped timer while we were awaiting
     cur++;
 
     let text = "";
