@@ -18,7 +18,7 @@ async function toggle() {
 
   if (started) {
     document.getElementById("start-button").innerText = "Stop";
-    document.getElementById("time").innerText = "0:0:0:0";
+    document.getElementById("time").innerText = "0:00:00:00:00";
   } else {
     document.getElementById("start-button").innerText = "Start";
     str(1)
@@ -26,16 +26,17 @@ async function toggle() {
 
   let cur = 0;
   while (started) {
-    await wait(1000);
+    await wait(10);
     if (!started) { break; } // In case user stopped timer while we were awaiting
     cur++;
 
     let text = "";
 
-    text += Math.floor(cur / (24 * 60 * 60));  // Javascript, am I right?
-    text += ":" + Math.floor(cur / (60 * 60));
-    text += ":" + Math.floor(cur / 60);
-    text += ":" + cur % 60;
+    text += Math.floor(cur / (24 * 60 * 60 * 100));                         // Days // Javascript, am I right?
+    text += ":" + String(Math.floor(cur / (60 * 60 * 100))).padStart(2, 0); // Hours
+    text += ":" + String(Math.floor(cur / (60 * 100))).padStart(2, 0);      // Minutes
+    text += ":" + String(Math.floor(cur / 100)).padStart(2, 0);             // Seconds
+    text += ":" + String(cur % 100).padStart(2, 0);                         // Miliseconds
 
     document.getElementById("time").innerText = text;
   }
