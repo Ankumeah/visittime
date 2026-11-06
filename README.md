@@ -15,7 +15,7 @@ but in case its not, I probably just got lazy ;]
 - Minutes
 - Hours
 - Days
-- Total sessions, stored locally
+- Past sessions, stored locally
 
 ## Credits and Licensing
 Orginal by [kpoovakan](https://kpoovakan.github.io). Licensed under the [Boost Software License](https://github.com/kpoovakan/visittime/blob/main/LICENSE). The winter wonderland background was drawn in [Turbowarp](https://turbowarp.org/editor).

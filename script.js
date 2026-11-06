@@ -1,16 +1,18 @@
-let started = false
+let started = false;
+let last_time = "0:00:00:00:00";
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-function str(add) {
-  var streak = Number(window.localStorage.getItem("vtStr"));
-  if (streak) {
-    streak += add;
-  } else {
-    var streak = 1;
-  }
-  document.getElementById("str").innerText = streak;
-  window.localStorage.setItem("vtStr", streak);
+function add_session(time) {
+  let sessions = JSON.parse(window.localStorage.getItem("vtSessions") || "[]");
+
+  sessions.push(time);
+  document.getElementById("str").innerText = sessions.length + 1;
+
+  let sessions_dropdown = document.getElementById("sessions-dropdown")
+  sessions_dropdown.innerHTML = sessions_dropdown.innerHTML + `<p class="session">${time}</p>`
+
+  window.localStorage.setItem("vtSessions", JSON.stringify(sessions));
 }
 
 async function toggle() {
@@ -21,7 +23,7 @@ async function toggle() {
     document.getElementById("time").innerText = "0:00:00:00:00";
   } else {
     document.getElementById("start-button").innerText = "Start";
-    str(1)
+    add_session(last_time);
   }
 
   let cur = 0;
@@ -38,13 +40,32 @@ async function toggle() {
     text += ":" + String(Math.floor(cur / 100)).padStart(2, 0);             // Seconds
     text += ":" + String(cur % 100).padStart(2, 0);                         // Miliseconds
 
+    last_time = text;
     document.getElementById("time").innerText = text;
   }
+}
+
+function toggle_sessions_dropdown() {
+  let menu = document.getElementById("sessions-dropdown");
+  menu.hidden = !menu.hidden;
+}
+
+function clear_sessions() {
+  window.localStorage.setItem("vtSessions", "[]");
+  document.getElementById("str").innerText = "1";
+
+  document.getElementById("sessions-dropdown").innerHTML = '<button class="sessions-button" onclick="clear_sessions()">Clear</button>'
 }
 
 window.addEventListener(
   "DOMContentLoaded",
   async function() {
-    str(0);
+    let sessions = JSON.parse(window.localStorage.getItem("vtSessions") || "[]");
+    document.getElementById("str").innerText = sessions.length + 1;
+
+    sessions.forEach((session) => {
+      let sessions_dropdown = document.getElementById("sessions-dropdown")
+      sessions_dropdown.innerHTML = sessions_dropdown.innerHTML + `<p class="session">${session}</p>`
+    })
   }
 );

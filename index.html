@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 
 <head>
-  <title>Visit Time - kpoovakan</title>
+  <title>Visit Time - forked from kpoovakan</title>
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="img/clock.svg">
 </head>
 
 <body>
-  <h1>Visit Time</h1>
-  <p id="time">0:00:00:00:00</p>
-  <p>Session #<span id=str></span><br>Keep grinding!</p>
+  <div id="content">
+    <h1>Visit Time</h1>
+    <p id="time">0:00:00:00:00</p>
+    <p id="session-counter">Session #<span id=str></span><br>Keep grinding!</p>
 
-  <button class="control-button" id="start-button" onclick="toggle()">Start</button>
+    <div id="sessions-box">
+      <button class="sessions-button" onclick="toggle_sessions_dropdown()">Past Sessions</button>
 
-  <script src="script.js"></script>
+      <div id="sessions-dropdown" hidden>
+        <button class="sessions-button" onclick="clear_sessions()">Clear</button>
+      </div>
+    </div>
+
+    <button class="control-button" id="start-button" onclick="toggle()">Start</button>
+
+    <script src="script.js"></script>
 </body>

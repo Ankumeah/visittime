@@ -12,11 +12,14 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   text-shadow: 0 0 5px #f6f6ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .control-button {
   font-size: 1.3em;
-                    /*
+  /*
                       To why this does not
                       inherit from body,
                       I do not know,
@@ -27,7 +30,38 @@ body {
   background-color: #ffffff;
   color: #b1b2d0;
   border-width: 0px;
-  border-radius: 999999rem;
   /* UNLIMITED POWERRRR */
+  border-radius: 999999rem;
   box-shadow: 0 0 5px #777799;
+}
+
+#session-counter {
+  margin-bottom: 0.1rem;
+}
+
+.sessions-button {
+  font-size: 0.5em;
+  height: 3rem;
+  width: 15rem;
+  background-color: #ffffff;
+  color: #b1b2d0;
+  border-width: 0px;
+  /* UNLIMITED POWERRRR */
+  border-radius: 999999rem;
+  box-shadow: 0 0 5px #777799;
+}
+
+#content {
+  height: fit-content;
+}
+
+.session {
+  margin: 0.2rem;
+}
+
+#sessions-box {
+  margin-bottom: 2rem;
+  max-height: 20vh;
+  overflow-y: auto;
+  scrollbar-color: #b1b2d0;
 }
