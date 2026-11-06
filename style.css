@@ -7,9 +7,9 @@ body {
   text-align: center;
   font-size: 3em;
   width: 100%;
-  background-image: url(img/snow.svg);
+  background-image: url(img/snow.png);
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-position: center center;
   text-shadow: 0 0 5px #f6f6ff;
   display: flex;
